@@ -35,7 +35,7 @@
           </ul>
           <ul class="login">
             <img src="src/Images/cart.png" class="cart" alt="Cart" />
-            <li>LOGIN</li>
+             <a href="/register" >LOGIN</a>
           </ul>
         </nav>
         <section class="rechercher">
@@ -293,6 +293,9 @@
 
 
 <script>
+function Login() {
+    window.location.href = "/login";
+}
 
 
     //     methods: {
@@ -397,7 +400,7 @@ a {
   width: auto;
   height: 50px;
   float: left;
-  
+
 }
 
 .li {
@@ -429,9 +432,13 @@ a {
   padding-bottom: 5%;
 }
 
-.loupe {
-  width: auto;
-  height: auto;
+section.rechercher{
+    padding-top: 50px;
+}
+
+img.loupe {
+  width: 20px;
+  height: 10px;
   margin-right: 5px;
 }
 .match {
@@ -580,10 +587,10 @@ input[type="range"]::-webkit-slider-runnable-track {
 
 @media screen and (max-width: 768px) {
   .pagination {
-    width: auto; /* Redimensionne la pagination en fonction du contenu */
-    font-size: 14px; /* Réduis la taille de la police pour les petits écrans */
-    text-align: center; /* Centre la pagination horizontalement */
-    margin: 10px 0; /* Réduit la marge pour économiser de l'espace vertical */
+    width: auto; 
+    font-size: 14px; 
+    text-align: center; 
+    margin: 10px 0; 
   }
 }
 

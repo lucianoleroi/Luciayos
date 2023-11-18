@@ -3,8 +3,7 @@
 
 <template>
  <section>
-    <h1>Je suis sur la page categories</h1>
-    <h2>{{ message }}</h2>
+    <h1>Je suis sur la page Categories</h1>
   </section>
 </template>
 

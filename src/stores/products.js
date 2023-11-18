@@ -5,11 +5,11 @@ export const useCounterStore = defineStore('Products',  {
   state : () => {
     return {
       Products: [],
-      status: "default"
+      status: 'default'
     }
   },
 
-  getters : { //methode permettant de récupérer des éléments
+  getters : { 
     getProducts: state => state.Products,
     getStatus: state => state.status,
    },
@@ -17,12 +17,11 @@ export const useCounterStore = defineStore('Products',  {
    
   actions : {
   async fetchProducts() {
-   
-    this.product = await axios({url:"http://localhost/api/products", method : "get"}), 
-      
-   
-      console.error("Erreur lors de la récupération des produits :", error)
-    }
+   this.status = 'fetching'
+    this.state.Products = await axios({url:"http://localhost/api/products", method : "get"}), 
+    this.status = 'done'
+
+    },
   }
 
 })

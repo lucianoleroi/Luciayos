@@ -1,122 +1,119 @@
 
 <style>
-body
-{
+* {
     margin: 0;
     padding: 0;
-    background-color:#ffff;
-    font-family: 'Arial';
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
-.login{
-        overflow: hidden;
-        margin: auto;
-        padding: 80px;
-        background: #fff;
-        border-radius: 15px ;
-        border: #08ffd1 1;
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        padding-left: 380px;
-}
-
-
-/* Search bar */
-form{
-display: flex;
-flex-direction: column;
-align-items: center;
-width: fit-content;
-justify-content: center;
-}
-
-label{
-    color: #08ffd1;
-    font-size: 17px;
-}
-
-#Uname{
-    width: 300px;
-    height: 30px;
-    border: none;
-    border-radius: 3px;
-    padding-left: 8px;
-    background-color: #19198f;
-}
-   
-#Pass{
-    width: 300px;
-    height: 30px;
-    border: none;
-    border-radius: 3px;
-    padding-left: 8px;
-    background-color: #19198f;
-}
-
-#log{
-    width: 100px;
-    height: 30px;
-    border: none;
-    border-radius: 17px;
-    padding-left: 7px;
-    color: blue;
-}
-
-span{
-    color: white;
-    font-size: 17px;
-}
-
-a{
-    float: center;
-}
-
-#Passf {
-    float: right;
-    margin-right: 10px; 
-    padding: 5px 10px;
-    padding-top: -100px;
-    background-color: #c70202;
-}
-
-#Dha {
-    padding-top: 10px;
-
-}
-
 .premimg{
     display:flex;
-    align-items: right;
-    width:50px;
+    align-items: center;
+    width:120px;
     margin-right:  60px;
+    margin-left: 130px;
 }
-
-.hautdepage{
-   align-items: center;
-   display: inline-flex;
-}
-
 .searchbar{
-   width:300px;
-}
+    width:1300px;
+    height: 50px;
+ }
+ 
+ img.loupe{
+ width:150px;
+ height: 50px;
+ margin-right: 130px;
+ }
+ 
+ 
 
-img.loupe{
-  float: left;
-  width: 150px;
-  margin-right: 20px;
-  margin-left: 1000px;
-
-}
-
-.premierboutton{
+ .premierboutton{
     width:110px;
     border-color: aqua;
-    background-color: rgb(164, 31, 31);
-    height: 25px; 
+    background-color: white;
+    height: 25px;
+   
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+}
+ 
+.hautdepage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #f0f0f0; 
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.input-box{
+    width:300px;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+
+h4{
+    padding-left: 10px;
+}
+
+
+input{
+width: 290px;
+}
+
+div.toutenfait {
+    width: 30px;
+    margin-top: 100px;
+    padding: 10px;
+    text-align: center;
+}
+
+.wrapper {
+    text-align: center;
+}
+h4{
+    text-align: left;
+   color :grey
+}
+ 
+.input{
+    width:100 px;
+}
+ 
+.remerberandacount {
+    text-align: center;
+    margin-top: 15px;
+}
+ 
+.remerber-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+ 
+.register-link {
+    margin-top: 10px;
+}
+ 
+.buttonenbas {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(15, 156, 232);
+   
+   
+}
+.buttonenbas{
+    color:white;
+}
+
+.form{
+    float: center;
+    padding-left: 682px;
 }
 </style> 
 
@@ -126,39 +123,53 @@ img.loupe{
 <head>
 </head>
 <body>
-  <div>
+    <div>
     <div class="hautdepage">
-      <img class="loupe" src="src/Images/MyShop.png" >
-          <input class="searchbar" @keyup="searchItem" type="text" name="search" placeholder="Search" />
-          <img class="premimg" src="src/Images/search1.png">
-          <button class="premierboutton" v-on:click="LogIn"> Log In </button>
-      </div>
-
-      <div class="login">
-        <form id="login" method="get" action="login.php">
-            <label><b>Name
-            </b>
-            </label>
-            <input type="text" name="Uname" id="Uname" placeholder="Name">
-            <br><br>
-            <label><b>Password
-            </b>
-            </label>
-            <input type="Password" name="Pass" id="Pass" placeholder="Password">
-            <br><br>
-            <input type="button" name="log" id="log" value="Log In">
-            <br><br>
-            <a href="#" id="Passf">Password forgetten?</a>
-            <a href="#" id="Dha">Don't have an account? REGISTER</a>
-        </form>
+        <img class="premimg" src="src/Images/MyShop.png">
+        <input class="searchbar" @keyup="searchItem" type="text" name="search" placeholder="Search" />
+        <img class="loupe" src="src/Images/search1.png">
     </div>
-  </div>
+
+<div class="form">
+    <div class="toutenfait">
+        <div class="wrapper">
+            <h1>Log In</h1>
+            <form action="">
+                <h4>Name </h4>
+                <div class="input-box">
+                    <input type="text" v-model="name" placeholder="Name" required/>
+                    <i class="bx bxs-lock-alt"></i>
+                </div>
+                <h4>Password</h4>
+                <div class="input-box">
+                    <input type="password" v-model="Password" placeholder="Password" required/>
+                </div>
+            </form>
+        </div>
+       
+   
+ 
+            <div class="register-link">
+                <p>Don't have an account? <a href="/register" >Register here!</a></p>
+            </div>
+            <button  class="buttonenbas" type="submit" v-on:click="signUp">Sign In</button>
+        </div>
+    </div>
+</div>
 </body>
 </template>
 
 
 
 <script>
+function Register() {
+    window.location.href ="/register";
+}
+// var Register = document.getElementById('Register');
+
+// Register.addEventListener('click', function(){
+//     window.location.href = '/register';
+// });
 </script>
 
 

@@ -25,7 +25,7 @@ const router = createRouter({
     },
 
     {
-      path: "/",
+      path: "/login",
       name: "login",
       component: Login
     },
@@ -37,7 +37,7 @@ const router = createRouter({
     },
 
     {
-      path: "/products",
+      path: "/",
       name: "products",
       component: Products
     },
